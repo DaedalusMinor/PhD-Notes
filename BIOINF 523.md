@@ -1,0 +1,82 @@
+# Lecture (10/30/2023)
+
+#[[Epigenetics]]
+### [[Chromatin Organization]]
+- **Nucleosomes**: first level of compaction of the human genome
+	- complex of eight **histones**
+	- Nucleosomes compact DNA 5-10x 
+	- diploid human cell with 2 copies of genome and ~6 bill bp has approx 30 mill nucleosomes
+- **Histone H1**: second level of compaction
+	- compacts genome by interacting with nucleosomes, compacting them into sort of a spiral shape
+- **third level**: 30nm fibers organized into 300nm by scaffolding proteins
+- **fourth**: 700nm fibers
+- **fifth**: final compacted into chromosome state
+- **DNA accessibility**: shape plays a role in regulation
+	- **Euchromatin**: open and considered active
+	- **Heterochromatin**: condensed and inactive
+	- Histone and/or DNA modifications dynamically change accessibility
+### [[DNA Methylation]]
+- **Methylation**: deactivates gene expression
+	- occurs on cytosines in the DNA
+	- Methylated by methylating enzymes
+- Methylated DNA is binding site for chromatin remodeling proteins, which condenses chromatin
+- Also inhibits TF binding
+### [[Histones]]
+- Form octamers with each other, nucleosome
+- rich in Lysine and Arginine amino acids: positively charged at neutral pH
+- N-terminus of each histone protein sticks out from nucleosome and looks like a tail
+	- subject to different modifications that affect DNA accessibility
+- **Common Modifications**: Methylation and Acetylation
+	- H3 and H4 are usual targets of these mods
+	- >50 sites are known to be modified on histone tails
+- **Acetylation**: adding acetyl group to Lysine (K)
+	- masks positive charge of Lysine amino acid
+	- weakens interaction between histone and negatively charged DNA
+	- opens up genome, "turns on" genome
+- **Methylation (histones)**: Lysines (K) and Arginines
+	- can either activate or repress genes, depending on the amino acid on which amino acid is being methylated
+	- **Mono, Di, or Tri** methylation:
+		- *H3K4me1, H3K4me2, H3K4me3*: Histone H3's Lysine at residue 4 is methylated one, two, three times
+
+- **Electrophoretic Mobility Shift Assays**: EMSA, combine labeled piece of DNA with a protein
+	- run a gel on samples of binding DNA and protein
+	- protein adds weight to protein: slows down DNA radiation bend in gel analysis
+
+## [[ChIP-Seq]]
+- Chromatin Immunoprecipitation next generation sequencing
+- can determine location in genome of a particular histone with a specific methylation
+- determine where a specific protein is interacting with DNA
+- **Protocol**:
+	- Add cross-linking agent (formaldehyde) to fix DNA/protein interactions
+	- Lyse cells
+	- Fragment DNA into uniform size pieces
+	- Add magnetic bead conjugated antibodies
+	- Use magnets to isolate Antibody-Protein-DNA complexes
+	- Use heat to reverse crosslinks, release DNA
+	- Isolate and sequence DNA
+	- Use peak finding software to identify regions
+
+#### Example of ChipSEQ: NRSF/REST Transcriptional Repressor
+- silencing TF
+- negative regulator
+- inhibits by recruiting histone deacetylases to genome promoters
+- Histone Deacetylation promotes closed form of chromatin
+- Really well characterized binding protein: ~80 known binding sites in human genome
+	- also has high-quality antibody
+- Found 1946 enriched regions
+	- subset of regions contain 1 or 2 canonical binding sites
+	- without known binding sites: hmmm
+	- canonical binding sites line up veryyyy well
+	- found peaks at computationally predicted binding sites
+	- top 10% canonical peaks were plugged into MEME algorithm to get a SINGLE motif: separation of 2nt
+	- same happened for noncanonical, except separated by 11nt
+- shown novel binding site of first exon in NeuroD1 gene
+
+### ENCODE
+- encyclopedia of DNA elements
+- multi-national consortium follow up to human genome project
+- **Discoveries**:
+	- histone modification patterns are highly predictive of gene TSSs
+		- also where TFs bind to genome
+
+

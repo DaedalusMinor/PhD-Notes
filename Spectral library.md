@@ -1,0 +1,2 @@
+- "A curated, annotated and non-redundant collection/database of [[Tandem Mass Spectrometry]] peptide spectra."
+- Serve as a consensus template to identify peptides/proteins in an experiment
