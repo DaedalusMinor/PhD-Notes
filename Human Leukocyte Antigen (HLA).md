@@ -1,0 +1,22 @@
+Complex of genes on chromosome 6 in humans which encode cell-surface proteins responsible for regulation of the immune system
+- Also known as major histocompatibility complex (MHC) found in many animals
+- mutations here are associated with many known autoimmune diseases like type I diabetes and celiac disease
+- **HLA class I** antigens are expressed on all nucleated cells and platelets (except those of the central nervous system)
+- **HLA class II** antigens are expressed on antigen presenting cells (APC) such as B lymphocytes, dendritic cells, macrophages, monocytes, Langerhans cells, endothelial cells
+- Help present peptides of foreign proteins to CD4 helper T cells, which cascade an immune response to destroy the pathogen
+- Important in [[Immunopeptidomics]]
+- preferentially bind certain peptide motifs, so should represent a system in which what kinds of peptides should be identified based on their sequences
+- MSBooster workflow
+	- MSFragger produces PIN and pepXML files
+	- MSBooster gets all peptides by iterating through all pin files and getting all target and decoys matched to at least one psm
+	- Passed to a DL model for feature prediction
+		- only top hits (as reported by MSFragger) are used in this, saving computing resources
+	- fragment intensities remain the same, but MSBooster shifts fragment m/z to accommodate new PTMs
+	- Feature calc step:
+		- predictions from DL model are loaded
+		- mzML (or MGF) and pin file pairs are sequentially loaded for processing and "DL-extended PSM feature table generation"
+		- ???? "highest intensity experimental MS/MS peak within the fragment error tolerance of the reported predicted fragment is removed from experimental spectrum" ???? why?
+		- RT and IM calibrations are performed
+		- MSBooster iterates through pin file and adds desired features
+- DIA-NN was used to predict RT, IM, and MS/MS spectra (speed and ease w/in FragPipe)
+	- MSBooster adjusts pyro-glutamation PTMs with m/z shifts, other PTMs are accounted for by DIA-NN

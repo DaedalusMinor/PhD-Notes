@@ -1,0 +1,12 @@
+Tool for rescoring [[Peptide Spectrum Matches (PSM)]] from MS/MS using additional deep learning features, such as [[Retention Time (RT)]], [[Ion Mobility (IM)]], and MS/MS spectra predictions.
+- Positioned between [[MSFragger]] and [[Percolator]] within [[FragPipe]]
+- role in fragpipe workflow
+	- input file formatting for a DL model
+	- feature calculation using observed and predicted peptide properties
+	- addition of new features to PSM files
+- In a typical workflow w/o MSBooster, search scores are stored for each PSM in a PIN file
+	- MSBooster extracts peptides in this PIN file and uses them as input for a DL model
+- [[DIA-NN]] predicts RT, IM, MS/MS properties and is chosen in Fragpipe to do this prediction (wait what??? so something like this already exists????)
+- only does predictions for a small set of PSM candidates
+- Passes results to [[Percolator]] which learns an SVM to differentiate decoys and targets
+- 
