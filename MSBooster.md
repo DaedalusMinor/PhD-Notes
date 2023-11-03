@@ -6,7 +6,7 @@ Tool for rescoring [[Peptide Spectrum Matches (PSM)]] from MS/MS using additiona
 	- addition of new features to PSM files
 - In a typical workflow w/o MSBooster, search scores are stored for each PSM in a PIN file
 	- MSBooster extracts peptides in this PIN file and uses them as input for a DL model
-- [[DIA-NN]] predicts RT, IM, MS/MS properties and is chosen in Fragpipe to do this prediction (wait what??? so something like this already exists????)
+- [[DIA-NN]] predicts RT, IM, MS/MS properties and is chosen in Fragpipe to do this prediction
+	- ***Note***: DIA-NN is the chosen feature prediction model for the paper, but any tool can be used of MSBooster, that is the point
 - only does predictions for a small set of PSM candidates
 - Passes results to [[Percolator]] which learns an SVM to differentiate decoys and targets
-- 

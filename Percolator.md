@@ -1,0 +1,9 @@
+- **Problem**: scoring methods for spectral searches include a lot of overlap between correct and incorrect peptides
+	- **solution**: control the false discovery rate using decoys
+	- ORRRR: use a machine learning method to re-rank the PSMs and set threshold automatically using reranked list
+- PSM is associated with fixed length vector of features, weights learned from training
+- improves peptide identification for searching methods like SEQUEST
+- Problem with features that are specific for each experiment
+	- unreasonable to train a new model for every single type of experiment
+	- what do?: use semi-supervised approach
+		- SVM learns difference between decoys and targets through 20 features

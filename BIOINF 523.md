@@ -1,6 +1,6 @@
 # Lecture (10/30/2023)
 
-#[[Epigenetics]]
+# [[Epigenetics]]
 ### [[Chromatin Organization]]
 - **Nucleosomes**: first level of compaction of the human genome
 	- complex of eight **histones**
@@ -78,5 +78,42 @@
 - **Discoveries**:
 	- histone modification patterns are highly predictive of gene TSSs
 		- also where TFs bind to genome
+
+
+# Lecture 11/1/2023
+# [[DNA Sequencing]]
+## [[Sanger Sequencing]]
+- **dideoxyribonuclease triphosphate (ddNTPs)**: does not have a hydroxyl group at 3' carbon, so strand can not be extended on the 3' end
+- prepare primer with DNA of interest
+- include small amounts of ddNTPs in mixture
+	- this stops strand extension when ddNTP is added
+- in separate ddNTP and DNA polymerase mixtures, find lengths of separate DNA strands
+	- N length strand in ddNTP mix, base is at Nth position
+	- determined by gel electrophoresis
+- Note: SNPs can mess up gels, make two nucleotides look like they're from the same position
+- Labeling:
+	- label primer
+	- label dNTP
+	- label ddNTP
+- Currently: instead of gels
+	- laser detection of different bases suspended in a capillary gel
+- **Capillary gel**: gels are in thin capillaries with charge difference at ends
+- to determine whether mutation in intensity plot: sequence from both sides
+- High accuracy, low volume
+- can be read in parallel
+# Human Genome Project
+- **[[Shotgun Sequencing]]**: assemble contigs from PCR amplified regions
+	- proposed in middle of project to speed up sequencing
+	- trouble with contig flipping, orientation is unknown
+- Moore's law and cost per genome have correlation
+
+# [[Next Generation Sequencing]]
+- Massively parallel sequencing
+- Attach adapters to DNA molecules
+	- terminus on other end binds to terminator in flow cell
+	- bend becomes double stranded
+	- amplify signals to show clusters
+	- sequence by synthesis (SBS): synthesize other strand, get signal by adding one base at a time
+
 
 
