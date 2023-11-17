@@ -1,0 +1,7 @@
+- Use previous paper and prosit model to compare
+- K-Fold learning:
+	- parameters: num_split/model_split, 
+		- split pepxml models
+		- get n different models, trained on n-1 folds each
+		- SpectraRT.csv: input file for alphapeptdeep, going to get split as well
+		- provide spectraRTpredfile, mgf file

@@ -114,6 +114,163 @@
 	- bend becomes double stranded
 	- amplify signals to show clusters
 	- sequence by synthesis (SBS): synthesize other strand, get signal by adding one base at a time
+- Illumina
+# Lecture 11/6/2023
+## continuing on NGS
+- bar codes added to adapters to uniquely identify each sample sequence
+# Third Generation Sequencing
+- PacBio: long fragments of length 500-8000 after creating a circle with adaptors
+	- no PCR
+	- sequences molecules in real time
+- PacBio II
+	- Quicker: 30 minutes to 3 hours
+	- longer fragments
+	- How it works
+		- generate amplicon
+		- ligate adaptors: dumbell structure, closes what would be adaptors
+		- if denatured, primers form a circle
+		- polymerase attached to bottom of small well
+		- light signals read as polymerase works on molecule
+		- not massively parallel
+		- high error rate
+		- 20kb reads
+		- can distinguish methylated vs. nonmethylated by sequencing delay
+		- Another method allows circular DNA to be sequenced mutliple times in a single well by repeated
+- Ion Torrent:
+	- highly uniform coverage
+	- wave difference of hydrogen proton release that happens during synthesis
+	- eliminate sequence error sources: 
+		- modified bases
+		- fluorescence
+	- much faster
+- Oxford Nanopore: not sequenced by synthesis
+	- helicase-pore complex brings double strand to complex, unzips as single strand goes through pore
+	- ion current being passed through pore, bases interrupt current in unique way
+	- 4 million reads, and can also use short read sequencing that is 50 to 300 bp long
+- combination:
+	- PacBio and short read assembly helps improved assembly quality
+- Sequence capture:
+	- before sequencing, hybridize and elute DNA you want to capture
+	- most popular: exome sequencing capture all human exomes and surrounding DNA regions
+		- some exomes are better sequenced than others
+	- custom capture: using "panels"
+		- only look at genes of interest e.g. cancer causing genes
+
+### Applications of NGS/3GS
+- **RNA sequencing**: digital gene expression ??
+- **ChIP-Seq**: 
+- De Novo Sequencing: without reference
+- resequencing after capture
+
+# Lecture 11/8/2023
+## Variants in Human DNA
+- 14 Million SNPs, or around 1 mill common human snps
+- most common form of variant
+- 12% of human genome is affected by CNVs (copy number variations)
+- CNVs:
+	- change in the number or copies of loci
+	- ***de novo***: CNV that is not inherited
+	- Microdeletions 
+	- **Recurrent**: associated with distinct but variable phenotypes. formed by NAHR during meiosis mediated by flanking repeat sequences and are associated with hotspots for rearrangement
+	- **non-recurrent**: arise across genome and appear to be formed by unclear homologous repair mechanisms
+- de novo mutations in autism and schizo
+	- 6-7% autism cases are known to have cytogenetic abnormality
+	- 10% of cases of autism de novo CNVs found
+	- de novo CNVs have been found increased in SZ
+	- CNV locus 1q21.1 deletion can increase chances of ID and SCZ by factor of about 10, statistically insignificant change for ASD
+- CNVs in health
+	- accounts for 10-15% for severe intellectual disabilities or neuro disorders
+	- Normal CNV mutation rate estimated to be 0.01-0.03 mutations per haploid genome per generation
+
+## Genome wide SNPs studies
+- Linkage disequilibrium
+- for finding SNPs use Illumina chips: using beads with primers and ddNTPs that antibodies bind to and create signals for specific bases
+- only capture signal for two bases
+	- most SNPs are C/A or C/T alleles
+	- SNP chip:
+		- 300k - 500k common tag snps
+		- 6k - 10k common snps for linkage
+		- 300k exome missense or LOF coding SNPs 
+		- 50k SNPs that are added for custom content
+	- Most original SNP arrays are biased for Caucasians
+- Can use PCR to show a deletion
+- Chromosomal microarrays (CMA)
+- competitive genomic hybridization (CGH)
+- region of homozygosity, way to see if you have a deletion
+
+### What is genetic testing used for?
+- comfort in knowing where disease comes from
+- recurrence risk within the family
 
 
+# Lecture 11/13/2023
+## [[Genome Wide Association (GWA)]]
+- Genetic association test
+- Most SNPs differ in allele frequency by population, even by subpopulaiton
+	- to examine stratification, use PCA to separate populations
+	- idea behind ancestry searches
+- QQ plots: Quality control 
+	- expected vs. observed
+- manhattan plots:
+	- examining clusters of SNPs
+	- a lot of SNPs in human genome are highly correlated
+	- one snp that causes association
+- confounding association by ethnicity
+- effect sizes of GWAS SNPs are typically small
+- genes found by GWAS increase with sample size
+- the more samples the more SNPs
+	- with 100,000 samples, usually identify 10-100 SNPs
+	- usually explain about 1-3% of variance, and 2-5% of genetic variance (~50 inheritable)
+- Polygenic genetic risk scores (PRS or PGRS)
+	- Multinomial logistic regression procedure with model selection to identify the best fitting model of relations between phenotype and genotype (PRSice)
+		- used to show relationship between psychiatric disorders
+***Genetics contributes to severe respiratory COVID19***
+- *The phenotype was respiratory failure*: the use of oxygen supplementation or mechanical ventilation
+	- severity was graded 
+	- split between mechanical and non mechanical ventilation
 
+# Lecture 11/15/2023
+## [[Cell differentiation]]
+- two ways of making sister cells different
+	- *asymmetric*: difference in factors arranged in mother cell
+	- *symmetric*: difference in environmental factors after sister cells have been created
+- *inductive signal*: cells signal to neighboring cells, either to dissuade or encourage differentiation into their cell type
+- Three main embryonic layers:
+	- endoderm: lung cells, digestive tract, thyroid cells
+	- mesoderm: cardiac muscle cells, red blood cells, smooth muscle cells
+	- ectoderm: skin and neuron
+- formation of epithelial tube: epithelial cells separte the inside from the outside of the body
+	- invagination, specific regions of sheet become pinched off into an epithelial tube
+- drosophila: localized mRNAs direct localized differentiation in Drosophila
+	- morphogen gradients -> strict areas of gene transcription -> strict differentiated areas of protein translation
+	- Homeotic genes are conserved: Hox genes are conserved across drosophila, mice, and humans
+## [[Stem Cells]]
+- cant go back to stem cell after differentiation
+- gradient of differentiation in cells, stem cells going up become more specialized in skin and gut lining 
+- what is a stem cell:
+	- 1. stem cells are not terminally differentiated
+	- 2. stem cells can divide without limit
+	- 3. during cell division, daughter cells can: stay a stem cell or commit to terminal differentiation path
+- characterized by presence of transcription factor markers
+- different types
+	- *Adult*: limited range of cell types, tissue-specific
+		- rare
+		- found in bone marrow
+	- *embryonic*: found in early embryos, differentiate into any cell type
+		- advantage over adult
+			- wide range of differentiation
+			- easier to grow
+			- UM has greatest academic collection of ES cells from people with genetic disorders
+- transfection of mouse cells and human cells with certain transcription factors could reprogram them into iPS
+	- iPS cells can be induced into many cell types
+- stem cell therapeutics:
+	- proliferate extensively to generate sufficient quantities while maintaining potential to differentiate into the desired cell type(s)
+	- survive in recipient after transplant
+	- integrate into tissue
+	- function long term
+	- avoid harming recipient (growing into cancer cells)
+
+## Cancer
+- genetic changes: 
+	- deletion/mutation of tumor suppressor genes
+	- activation of oncogenes
