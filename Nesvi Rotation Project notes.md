@@ -1,0 +1,41 @@
+- changed ```msfragger.calibrate_mass=2``` to ```msfragger.calibrate_mass=0``` in ```Nonspecific-HLA-C57-Broad_Melanoma.workflow```
+- [[MSFragger]]
+- converting Melanoma .d files from the broad study to mzml files, taking a long time to do so
+	- used settings specified by fragpipe website for [[Trapped Ion Mobility Spectrometry (TIMS)]] Time of Flight (timsTOF) raw files
+	- Need to do this for [[MSBooster]] to function, can't take mzBIN files, just mzml or mgf
+	- Settings:
+		- precursor tolerance: 0.05 m/z
+		- scan time tolerance: 5 sec
+		- im tolerance: 5 ms or vs/cm^2
+- 11/7/2023:
+	- 11:55AM: while waiting for conversions to finish, look at ```forMitch``` code Kevin sent me, come back in a couple hours (may not even finish today honestly)
+	- 12:03PM: installing conda rn, getting setup for running python code and other modules in proteome-dev02 server
+	- 12:09PM: installing conda needs to be done, and in the future I will run this python code on the server, but for now, I think i'll dissect it using a local jupyter labs notebook
+	- 12:19PM: conda finished installing the [[alphapeptdeep]] environment
+		- Have to change transfer.ipynb file locations to other accessible files, since the examples are in ***/scratch/nesvi_root/nesvi0/*** which I don't have access to yet
+	- 12:22PM: head to lunch to see friends :)
+	- 1:06PM: two file conversions complete, before there was one that was about to finish, so maybe conversions take ~30 min? (from Broad melanoma dataset)
+	- 1:50PM: got the transfer code working for the most part, had to download modification.tsv from alphabase
+- 11/9/2023:
+	- 11:07AM: trying to get transfer.py to work in proteomics-dev, moved forMitch code in cloned Nesvi fork of alphapeptdeep
+		- Might have to install psutil in alphapeptdeep_env, I think it wasn't added in the yml file he sent me cause its in his base environment?
+		- success
+	- 11:47AM: asked for custom settings from kevin
+		- having troubles with pre_trained models, something about file not being a zip file
+	- Got rid of os.path.expanduser() in a few lines of the forked repo code, it was storing peptdeephome in my /home/ directory rather than my /storage/ directory
+- 11/17/2023:
+	- I forgor to write :)
+	- 4:20PM:
+		- met with kevin to go over next steps, alphapeptdeep transfer scripts succesfully ran, as well as the generic alphapeptdeep scripts in msbooster
+		- Ran MSFragger/MSBooster on Broad/Melanoma and Broad/PDAC
+			- currently running A375_HLAI set rn
+		- What needs to be done next: A375_HLAII, and then the non-timsTOF data?
+			- I don't think the Olsen study needs an MSFRagger run to get mzML but needs pepXML and pin files
+		- devised a storage schema, a way to store all results from different DL method runs on different datasets from different studies
+		- next steps:
+			- get some APD split runs on Melanoma set
+				- later will have to do this with every dataset, but just for a concept do that for now
+			- using predict.py?
+				- still ambiguous as to what I'm doing, predict.py code isn't commented but there is a main method where i can get an understanding of the workflow
+			- IDK if i should go ahead with running a bunch of these runs 
+				- probs should, I got specific parameters from kevin, just get results from all pin files that you can, wait for all other default MSBooster runs to finish.
