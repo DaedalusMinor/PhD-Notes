@@ -1,4 +1,5 @@
 Type of [[Mass Analyzer]]. Gas-phase separation method that has been coupled to quadrupole orthogonal acceleration time-of-flight mass spectrometry.  An electrical field controls each ion from moving beyond a position defined by the ion’s mobility, where the push it experiences from the gas flow matches the force of the electrical field. Ramping down the electrical field allows selectively releasing ions from the TIMS tunnel according to their mobility.
+Gas-phase separation method that has been coupled to quadrupole orthogonal acceleration time-of-flight mass spectrometry ([[TOF MS Analyzer]]).  An electrical field controls each ion from moving beyond a position defined by the ion’s mobility, where the push it experiences from the gas flow matches the force of the electrical field. Ramping down the electrical field allows selectively releasing ions from the TIMS tunnel according to their mobility.
 
 - Why?:
 	- resolves sample complexity with an added dimension of separation in addition to HPLC and mass spectrometry
